@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux'
+import {BrowserRouter} from "react-router-dom";
 
 import 'bulma/css/bulma.css';
 import './index.css';
@@ -21,14 +22,22 @@ ReactDOM.render(
                 </a>
             </div>
         </nav>
-        <div className="columns">
-            <div className="column is-one-fifth">
-                <Menu />
+        <div className="columns content-area">
+            <div className="column is-one-fifth main-menu">
+                <Menu/>
             </div>
-            <div className="column">
-                <div className="container">
-                    <App/>
-                </div>
+            <div className="column container detail-area">
+                <nav className="breadcrumb" aria-label="breadcrumbs">
+                    <ul>
+                        <li><a href="#">Bulma</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li className="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+                    </ul>
+                </nav>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
             </div>
         </div>
 

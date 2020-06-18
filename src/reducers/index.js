@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
             {},
             state,
             {
-                books: [...action.payload]
+                books: [...action.payload.slice(0, 10)]
             }
         )
     }

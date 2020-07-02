@@ -1,3 +1,0 @@
-export const LOAD_BOOKS = 'LOAD_BOOKS';
-export const SET_BOOKS_TO_THE_LISTS = 'SET_BOOKS_TO_THE_LISTS';
-export const LOAD_BOOKS_ERROR = 'LOAD_BOOKS_ERROR';
